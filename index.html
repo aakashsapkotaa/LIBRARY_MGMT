@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oxford Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        font-family: "Noto Serif", serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .header {
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(
+            rgba(4, 9, 30, 0.7),
+            rgba(4, 9, 30, 0.7)
+          ),
+          url(./schoolimg/ox.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+      }
+
+      nav {
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav img {
+        width: 100px;
+      }
+      .nav-links {
+        flex: 1;
+        text-align: right;
+      }
+
+      .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+      }
+      .nav-links ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+      }
+      .nav-links ul li::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background: #f44336;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+      }
+      .nav-links ul li:hover::after {
+        width: 100%;
+      }
+      .text-box {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        text-align: center;
+        color: #fff;
+      }
+      .text-box h1 {
+        font-size: 30px;
+      }
+      .text-box p {
+        margin: 10px 0 40px;
+        font-size: 14px;
+      }
+      @media (max-width: 700px) {
+        .nav-links {
+          top: 0px;
+          background-color: rgba(0, 0, 255, 0.053);
+        }
+        .text-box h1 {
+          font-size: 20px;
+        }
+        .nav-links ul li {
+          display: block;
+        }
+        .nav-links {
+          background-color: rgba(18, 109, 146, 0.401);
+        }
+        .nav-links {
+          position: absolute;
+          height: 100vh;
+          width: 200px;
+          top: -800px;
+          right: 0px;
+          text-align: left;
+          z-index: 2;
+          transition: 0.7s;
+        }
+        nav .fa {
+          display: block;
+          color: #fff;
+          margin: 10px;
+          font-size: 22px;
+          cursor: pointer;
+        }
+        .nav-links ul {
+          padding: 30px;
+        }
+      }
+      /* 
+footer */
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <img src="schoolimg/oxlogo.png" alt="Website Logo" />
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./catalog.html">CATALOG</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+            <li><a href="librarian/librarian/index.php">LIBRARIAN LOGIN</a></li>
+          </ul>
+        </div>
+        <div class="fa-solid fa fa-bars" onclick="showMenu()"></div>
+      </nav>
+      <br /><br />
+      <div class="text-box">
+        <h1>Welcome To Oxford LMS</h1>
+        <br /><br />
+        <p>
+          "Education is not preparation for life; education is life itself."
+        </p>
+        <p>
+          Our Library Management System is a state-of-the-art solution designed
+          to streamline the operations of our library. It empowers librarians,
+          students, and faculty with tools for efficient cataloging, circulation
+          management, and resource accessibility. With features such as user
+          management, online catalog search, and advanced reporting, we aim to
+          provide an enhanced and user-friendly experience for our library
+          community.
+        </p>
+      </div>
+    </section>
+
+    <!--------- footer --------->
+
+    <script>
+      let navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.top = "0";
+      }
+      function hideMenu() {
+        navLinks.style.top = "-800px";
+      }
+    </script>
+  </body>
+</html>

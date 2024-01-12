@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oxford-catalog
+  </title>
+  <link rel="stylesheet" href="style.css" />
+   <style>
+p{
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+        /* Add your CSS styles here */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color:black;
+        }
+.h1s{
+  color: white;
+}
+        .table {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .table th, .table td {
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #f2f2f2;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #e2e6ea;
+        }
+
+      </style
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+</head>
+<body>
+  <section class="sub-header">
+    <nav>
+      <a href="index.html"><img src="schoolimg/oxlogo.png" alt="logo" /></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li class="current"><a href="./catalog.html">CATALOG</a></li>
+          <li><a href="./contact.html">CONTACT</a></li>
+          <li><a href="librarian/index.php">LIBRARIAN LOGIN</a></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1 class=h1s>Catalog</h1>
+  </section>
+<br><br>
+      <h1>Library Hours</h1><br>
+      <div class="container">
+
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">Opening Time</th>
+                    <th scope="col">Closing Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sunday</td>
+                    <td>6:00 PM</td>
+                    <td>5:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>6:00 PM</td>
+                    <td>5:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>6:00 PM</td>
+                    <td>5:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>6:00 PM</td>
+                    <td>5:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>6:00 PM</td>
+                    <td>5:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>6:00 PM</td>
+                    <td>5:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Closed</td>
+                    <td>Closed</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+      <br>
+      <br>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
